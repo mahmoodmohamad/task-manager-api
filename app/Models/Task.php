@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Task extends Model
 {
     use HasFactory;
+    protected $fillable=['title', 'description','user_id','due_date','completed_at','is_completed'];
     //
 
    /**
@@ -18,5 +19,5 @@ class Task extends Model
         {
             return $this->belongsTo(User::class, 'user_id');
         }
-    
+
 }
